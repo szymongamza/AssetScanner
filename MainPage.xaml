@@ -4,15 +4,12 @@
              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="AssetScanner.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="200" CamerasLoaded="cameraView_CamerasLoaded"/>
-
-        </VerticalStackLayout>
-    </ScrollView>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" >
+            <Label Text="Asset Management" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20" />
+            <Button Text="Stocktakings" Clicked="StocktakingsButton_Clicked" FontSize="18" Margin="0,0,0,20" />
+            <Button Text="Asset Info" Clicked="AssetInfoButton_Clicked" FontSize="18" Margin="0,0,0,20" />
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>
