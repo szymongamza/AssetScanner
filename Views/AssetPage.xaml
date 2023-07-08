@@ -3,7 +3,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AssetScanner.AssetPage">
-    <ContentPage.Content>
-        <Label x:Name="TempLabel" FontSize="40"/>
-    </ContentPage.Content>
+    <StackLayout>
+        <Label x:Name="Name" FontSize="20"/>
+        <Label x:Name="Model" FontSize="20"/>
+    </StackLayout>
 </ContentPage>

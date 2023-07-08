@@ -5,8 +5,8 @@
 
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-            <Button ScaleX="2" ScaleY="2" Text="Stocktakings" Clicked="StocktakingsButton_Clicked" FontSize="22" Margin="0,0,0,100" />
-            <Button ScaleX="2" ScaleY="2" Text="Asset Info" Clicked="AssetInfoButton_Clicked" FontSize="22" Margin="0,0,0,0" />
+            <Button ScaleX="2" ScaleY="2" Text="Select stocktaking" Clicked="StocktakingsButton_Clicked" FontSize="22" Margin="0,0,0,100" />
+            <Button ScaleX="2" ScaleY="2" Text="Scan for info" Clicked="AssetInfoButton_Clicked" FontSize="22" Margin="0,0,0,0" />
         </StackLayout>
     </ContentPage.Content>
 

@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AssetScanner.Model;
+using AssetScanner.Services;
 using Camera.MAUI.ZXingHelper;
+using ZXing.QrCode.Internal;
 
 namespace AssetScanner;
 
 public partial class AssetInfoPage : ContentPage
 {
     private bool isAssetPageOpen = false;
-    public AssetInfoPage()
+    private IRestService _restService;
+    public AssetInfoPage(IRestService restService)
     {
+        _restService = restService;
         InitializeComponent();
     }
 
@@ -35,9 +40,13 @@ public partial class AssetInfoPage : ContentPage
         {
             isAssetPageOpen = true;
 
-            MainThread.BeginInvokeOnMainThread(() =>
+            MainThread.BeginInvokeOnMainThread(async () =>
             {
-                var assetPage = new AssetPage(args.Result[0].Text);
+                var query = new AssetQueryResource { ItemsPerPage = 1, Page = 1, QRCode = Guid.Parse(args.Result[0].Text) };
+                base.OnAppearing();
+                var response = await _restService.GetAsset(query);
+
+                var assetPage = new AssetPage(response.Items);
                 assetPage.Disappearing += (s, e) => { isAssetPageOpen = false; };
                 Navigation.PushAsync(assetPage);
             });

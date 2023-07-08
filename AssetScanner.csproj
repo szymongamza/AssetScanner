@@ -54,22 +54,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="AssetInfoPage.xaml.cs">
+	  <Compile Update="Views\AssetInfoPage.xaml.cs">
 	    <DependentUpon>AssetInfoPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="AssetPage.xaml.cs">
+	  <Compile Update="Views\AssetPage.xaml.cs">
 	    <DependentUpon>AssetPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="StocktakingsPage.xaml.cs">
+	  <Compile Update="Views\StocktakingsPage.xaml.cs">
 	    <DependentUpon>StocktakingsPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AssetInfoPage.xaml">
+	  <MauiXaml Update="Views\AssetInfoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="StocktakingsPage.xaml">
+	  <MauiXaml Update="Views\StocktakingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

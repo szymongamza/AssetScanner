@@ -16,9 +16,9 @@ public partial class MainPage : ContentPage
         Navigation.PushAsync(new StocktakingsPage());
     }
 
-    private void AssetInfoButton_Clicked(object sender, EventArgs e)
+    async void AssetInfoButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new AssetInfoPage());
+        await Shell.Current.GoToAsync(nameof(AssetInfoPage));
     }
 
 
