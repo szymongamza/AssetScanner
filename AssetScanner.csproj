@@ -57,6 +57,9 @@
 	  <Compile Update="AssetInfoPage.xaml.cs">
 	    <DependentUpon>AssetInfoPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="AssetPage.xaml.cs">
+	    <DependentUpon>AssetPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="StocktakingsPage.xaml.cs">
 	    <DependentUpon>StocktakingsPage.xaml</DependentUpon>
 	  </Compile>

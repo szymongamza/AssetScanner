@@ -2,8 +2,10 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="AssetScanner.AssetInfoPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Asset Info Page" FontSize="20" />
+    <StackLayout HorizontalOptions="Center">
+        <Label HorizontalTextAlignment="Center" Text="Zeskanuj kod QR aby wyświetlić informacje" FontSize="22" />
+        <cv:CameraView x:Name="CameraView" WidthRequest="400" HeightRequest="400" CamerasLoaded="CameraView_OnCamerasLoaded" BarCodeDetectionEnabled="True" BarcodeDetected="CameraView_OnBarcodeDetected"/>
     </StackLayout>
 </ContentPage>

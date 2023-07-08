@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:AssetScanner"
     Shell.FlyoutBehavior="Disabled">
     <ShellContent
-            Title="Home"
+            Title="Asset Management"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
 
